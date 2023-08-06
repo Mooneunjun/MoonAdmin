@@ -807,6 +807,88 @@ body {
   z-index: 2999;
 }
 
+.refund-popup {
+  position: absolute;
+  z-index: 3999;
+  top: 50%;
+  left: 50%;
+  width: 450px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.refund-popup .bx-plus {
+  transform: rotate(45deg);
+}
+
+.refund-popup .completed {
+  display: flex;
+}
+
+.refund-popup .completed input {
+  width: 50px;
+  height: 25px;
+  border-radius: 3px;
+  border: none;
+  display: flex;
+  text-align: center;
+  background-color: #ffffffd3;
+}
+
+.refund-popup .completed input:focus {
+  outline: none;
+  background-color: #dfdfdfc1;
+}
+
+.refund-button {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 20px;
+}
+
+.refund-button-input,
+.refund-button-output {
+  height: 40px;
+  width: 100px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--primary);
+  color: var(--light);
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.refund-button-output {
+  margin-left: 40px;
+  background-color: var(--dark-grey);
+  pointer-events: none;
+}
+
+.refund-sec {
+  margin-top: 20px;
+  background-color: var(--grey);
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.refund-sec .dot {
+  margin-right: 5px; /* 점과 텍스트 사이의 간격을 조절하려면 이 값을 조정하세요 */
+}
+
+.refund-sec code {
+  padding: 5px;
+  background: #8e8d8d90;
+  border-radius: 4px;
+  font-family: Courier, monospace;
+  line-height: 1.8;
+}
+
 .hidden {
   display: none;
 }

@@ -203,6 +203,58 @@
           </div>
 
           <!-- End of Reminders-->
+          <div class="reminders refund-popup hidden">
+            <div class="header">
+              <i class="bx bx-note"></i>
+              <h3>환불진행중</h3>
+              <i class="bx bx-plus"></i>
+            </div>
+            <ul class="task-list">
+              <li class="completed refund-total">
+                <div class="task-title">
+                  <i class="bx bx-check-circle"></i>
+                  <p>현재 환불징행중 건수</p>
+                </div>
+
+                <input type="number" />
+              </li>
+              <li class="completed refund-risk">
+                <div class="task-title">
+                  <i class="bx bx-check-circle"></i>
+                  <p>KRCN Risk reject</p>
+                </div>
+                <input type="number" />
+              </li>
+              <li class="completed refund-canceled">
+                <div class="task-title">
+                  <i class="bx bx-check-circle"></i>
+                  <p>Order Canceled by recipient</p>
+                </div>
+                <input type="number" />
+              </li>
+              <!-- <li class="not-completed">
+                <div class="task-title">
+                  <i class="bx bx-x-circle"></i>
+                  <p>Play Footbal</p>
+                </div>
+                <i class="bx bx-dots-vertical-rounded"></i>
+              </li> -->
+            </ul>
+            <div class="refund-button">
+              <button class="refund-button-input">입력</button>
+              <button class="refund-button-output">(복사개발중)</button>
+            </div>
+            <div class="refund-sec hidden">
+              <!-- @here 🇨🇳  8/4  <code>KRCN Risk reject</code> 현재 환불진행중
+              건수는 5건입니다.
+              <li><span class="dot">•</span> KRCN Risk reject 5건</li>
+              <li>
+                <span class="dot">•</span> Risk reject - Order canceled by
+                recipient 0건
+              </li>
+              이상  환불 안 내 단체 메일 발송 완료 -->
+            </div>
+          </div>
         </div>
       </main>
     </div>
@@ -250,5 +302,6 @@
     <!-- script -->
     <script src="index.js"></script>
     <script src="login.js"></script>
+    <script src="miniprogram.js"></script>
   </body>
 </html>
