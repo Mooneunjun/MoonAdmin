@@ -57,7 +57,7 @@ refundInput.addEventListener("click", function () {
 
   refundSec.innerHTML = `@here 🇨🇳  ${todayDate} `;
 
-  refundSec.innerHTML += "<code>`KRCN Risk reject`</code> ";
+  refundSec.innerHTML += `<code>KRCN Risk reject</code> `;
   refundSec.innerHTML += ` 현재 환불진행중
 건수는 ${refundTotal}건입니다.
 <li><span class="dot">•</span> KRCN Risk reject ${refundRisk}건</li>
