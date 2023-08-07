@@ -835,7 +835,7 @@ body {
   display: flex;
 }
 
-.refund-popup .completed input {
+.refund-popup input {
   width: 50px;
   height: 25px;
   border-radius: 3px;
@@ -845,7 +845,7 @@ body {
   background-color: #ffffffd3;
 }
 
-.refund-popup .completed input:focus {
+.refund-popup input:focus {
   outline: none;
   background-color: #dfdfdfc1;
 }
@@ -854,13 +854,13 @@ body {
   display: flex;
   justify-content: center;
 
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .refund-button-input,
 .refund-button-output {
-  height: 40px;
-  width: 100px;
+  height: 45px;
+  width: 400px;
   border-radius: 5px;
   border: none;
   background-color: var(--primary);
@@ -871,12 +871,11 @@ body {
 }
 .refund-button-output {
   margin-left: 40px;
-  background-color: var(--dark-grey);
-  pointer-events: none;
+  background-color: var(--primary);
 }
 
 .refund-sec {
-  margin-top: 20px;
+  margin-top: 30px;
   background-color: var(--grey);
   padding: 20px;
   border-radius: 15px;
@@ -910,4 +909,10 @@ body {
 
 input[type="number"] {
   padding-left: 15px;
+}
+
+button:disabled {
+  background-color: #dddddd;
+  color: #aaaaaa;
+  cursor: not-allowed;
 }

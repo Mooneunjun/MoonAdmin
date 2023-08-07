@@ -55,7 +55,10 @@ refundInput.addEventListener("click", function () {
   // 예시: 8/7
   const todayDate = `${month}/${date}`;
 
-  refundSec.innerHTML = `@here 🇨🇳  ${todayDate}  <code>KRCN Risk reject</code> 현재 환불진행중
+  refundSec.innerHTML = `@here 🇨🇳  ${todayDate} `;
+
+  refundSec.innerHTML += "<code>`KRCN Risk reject`</code> ";
+  refundSec.innerHTML += ` 현재 환불진행중
 건수는 ${refundTotal}건입니다.
 <li><span class="dot">•</span> KRCN Risk reject ${refundRisk}건</li>
 <li>
@@ -75,5 +78,46 @@ refundInput.addEventListener("click", function () {
   }
   refundSec.innerHTML += `이상  환불 안 내 단체 메일 발송 완료`;
 
+  const refundButtonOutput = document.querySelector(".refund-button-output");
+
+  refundButtonOutput.disabled = false;
   refundSec.classList.remove("hidden");
 });
+
+window.onload = function () {
+  var inputs = document.querySelectorAll('input[type="number"]');
+
+  inputs.forEach(function (input) {
+    input.addEventListener("input", function () {
+      var listItem = input.closest("li");
+      var icon = listItem.querySelector("i");
+
+      if (input.value != 0) {
+        listItem.classList.remove("not-completed");
+        listItem.classList.add("completed");
+        icon.classList.remove("bx-x-circle");
+        icon.classList.add("bx-check-circle");
+      } else {
+        listItem.classList.remove("completed");
+        listItem.classList.add("not-completed");
+        icon.classList.remove("bx-check-circle");
+        icon.classList.add("bx-x-circle");
+      }
+    });
+  });
+
+  var button = document.querySelector(".refund-button-output");
+  var refundSec = document.querySelector(".refund-sec");
+
+  button.addEventListener("click", function () {
+    navigator.clipboard
+      .writeText(refundSec.innerText)
+      .then(() => {
+        console.log("Text copied to clipboard");
+      })
+      .catch((err) => {
+        // possibly due to: NOT_ALLOWED_ERR
+        console.error("Could not copy text: ", err);
+      });
+  });
+};
