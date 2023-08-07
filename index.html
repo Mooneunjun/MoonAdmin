@@ -210,27 +210,37 @@
               <i class="bx bx-plus"></i>
             </div>
             <ul class="task-list">
-              <li class="completed refund-total">
-                <div class="task-title">
-                  <i class="bx bx-check-circle"></i>
-                  <p>현재 환불징행중 건수</p>
-                </div>
-
-                <input type="number" />
-              </li>
               <li class="completed refund-risk">
                 <div class="task-title">
                   <i class="bx bx-check-circle"></i>
                   <p>KRCN Risk reject</p>
                 </div>
-                <input type="number" />
+                <input type="number" min="0" />
               </li>
               <li class="completed refund-canceled">
                 <div class="task-title">
                   <i class="bx bx-check-circle"></i>
-                  <p>Order Canceled by recipient</p>
+                  <p>Order Canceled</p>
                 </div>
-                <input type="number" />
+                <input type="number" min="0" />
+              </li>
+
+              <li class="completed refund-global-risk">
+                <div class="task-title">
+                  <i class="bx bx-check-circle"></i>
+                  <p><strong>Global</strong> Risk reject</p>
+                </div>
+
+                <input type="number" min="0" />
+              </li>
+
+              <li class="completed refund-global-canceled">
+                <div class="task-title">
+                  <i class="bx bx-check-circle"></i>
+                  <p><strong>Global</strong> Order Canceled</p>
+                </div>
+
+                <input type="number" min="0" />
               </li>
               <!-- <li class="not-completed">
                 <div class="task-title">
