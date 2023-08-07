@@ -121,3 +121,17 @@ window.onload = function () {
       });
   });
 };
+
+window.addEventListener("DOMContentLoaded", (event) => {
+  var inputs = document.getElementsByClassName("numberInput");
+  for (var i = 0; i < inputs.length; i++) {
+    inputs[i].addEventListener("input", function (e) {
+      var value = e.target.value;
+      if (value.startsWith("0") && value.length > 1) {
+        e.target.value = parseInt(value, 10);
+      } else if (value === "") {
+        e.target.value = "0";
+      }
+    });
+  }
+});
