@@ -129,7 +129,19 @@ window.addEventListener("DOMContentLoaded", (event) => {
       var value = e.target.value;
       if (value.startsWith("0") && value.length > 1) {
         e.target.value = parseInt(value, 10);
-      } else if (value === "") {
+      } else if (value === "" && document.activeElement !== e.target) {
+        e.target.value = "0";
+      }
+    });
+
+    inputs[i].addEventListener("focus", function (e) {
+      if (e.target.value === "0") {
+        e.target.value = "";
+      }
+    });
+
+    inputs[i].addEventListener("blur", function (e) {
+      if (e.target.value === "") {
         e.target.value = "0";
       }
     });
