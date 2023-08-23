@@ -1,14 +1,25 @@
+//컬 스토리지에서 "user" 키와 그에 연결된 값이 삭제됩니다.
+localStorage.removeItem("User");
 // 'User' 키가 로컬 스토리지에 없는 경우에만 실행
 if (!localStorage.getItem("User")) {
   // 사용자 정보 객체 생성
-  var user = {
-    Id: "admin",
-    Password: "admin",
-    Name: "admin",
-  };
-
-  // 사용자 정보 객체를 포함하는 배열 생성
-  var users = [user];
+  var users = [
+    {
+      Id: "chao",
+      Password: "chao2023",
+      Name: "Chao",
+    },
+    {
+      Id: "moon",
+      Password: "moon46578",
+      Name: "Moon",
+    },
+    {
+      Id: "admin",
+      Password: "admin2023",
+      Name: "Admin",
+    },
+  ];
 
   // 배열을 JSON 문자열로 변환
   var usersJson = JSON.stringify(users);
