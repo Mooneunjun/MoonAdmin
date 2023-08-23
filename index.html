@@ -125,7 +125,7 @@
         <!-- End of Insights -->
 
         <div class="bottom-data">
-          <div class="orders">
+          <!-- <div class="orders">
             <div class="header">
               <i class="bx bx-receipt"></i>
               <h3>Recent Orders</h3>
@@ -167,10 +167,10 @@
                 </tr>
               </tbody>
             </table>
-          </div>
+          </div> -->
 
           <!-- Reminders -->
-          <div class="reminders">
+          <div class="reminders todo-list">
             <div class="header">
               <i class="bx bx-note"></i>
               <h3>Remiders</h3>
@@ -201,13 +201,38 @@
               </li>
             </ul>
           </div>
-
           <!-- End of Reminders-->
-          <div class="reminders refund-popup hidden">
+
+          <!-- todo-popup -->
+          <dialog class="reminders todo-popup">
+            <div class="header">
+              <i class="bx bx-note"></i>
+              <h3>Todo-plus</h3>
+              <form method="dialog">
+                <button class="todo-close-button" value="close">
+                  <i class="bx bx-plus"></i>
+                </button>
+              </form>
+            </div>
+            <div class="todo-text">
+              <input class="todo-input" />
+            </div>
+            <div class="todo-button">
+              <button class="todo-button-input">추가</button>
+            </div>
+          </dialog>
+          <!-- End of todo-->
+
+          <!-- refund-popup -->
+          <dialog class="reminders refund-popup">
             <div class="header">
               <i class="bx bx-note"></i>
               <h3>환불진행중</h3>
-              <i class="bx bx-plus"></i>
+              <form method="dialog">
+                <button class="refund-close-button" value="close">
+                  <i class="bx bx-plus"></i>
+                </button>
+              </form>
             </div>
             <ul class="task-list">
               <li class="not-completed refund-risk">
@@ -264,7 +289,8 @@
               </li>
               이상  환불 안 내 단체 메일 발송 완료 -->
             </div>
-          </div>
+          </dialog>
+          <!-- End of refund-popup-->
         </div>
         <div class="dimlayer hidden"></div>
       </main>

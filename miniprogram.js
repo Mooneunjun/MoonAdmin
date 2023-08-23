@@ -1,19 +1,90 @@
-const refund = document.querySelector(".refund");
+const refundPopOpen = document.querySelector(".refund");
 
 const refundPop = document.querySelector(".refund-popup");
-
+const todoPop = document.querySelector(".todo-popup");
 const refundPopClose = document.querySelector(".refund-popup .bx-plus");
-
+const todoPopClose = document.querySelector(".todo-popup .bx-plus");
+const todoPopOpen = document.querySelector(".todo-list .bx-plus");
 const dimlayer = document.querySelector(".dimlayer");
 
-refund.addEventListener("click", function () {
-  refundPop.classList.remove("hidden");
+refundPopOpen.addEventListener("click", function () {
+  refundPop.showModal();
+  refundPop.style.transform = "translate(-50%, -50%) scale(1)";
   dimlayer.classList.remove("hidden");
+
+  refundPop.style.opacity = 1;
+  refundPop.style.transform += "scale(1)";
+  refundPop.style.left = "50%";
+  refundPop.style.top = "50%";
 });
 
-refundPopClose.addEventListener("click", function () {
-  refundPop.classList.add("hidden");
+refundPop.addEventListener("close", () => {
+  refundPop.style.opacity = 0;
+  refundPop.style.transform = "translate(-50%, -50%) scale(0.8)";
   dimlayer.classList.add("hidden");
+});
+
+todoPopOpen.addEventListener("click", function () {
+  todoPop.showModal();
+  todoPop.style.transform = "translate(-50%, -50%) scale(1)";
+  dimlayer.classList.remove("hidden");
+
+  todoPop.style.opacity = 1;
+  todoPop.style.transform += "scale(1)";
+  todoPop.style.left = "50%";
+  todoPop.style.top = "50%";
+});
+
+todoPop.addEventListener("close", () => {
+  todoPop.style.opacity = 0;
+  todoPop.style.transform = "translate(-50%, -50%) scale(0.8)";
+  dimlayer.classList.add("hidden");
+});
+
+const refundPopHeader = document.querySelector(".refund-popup .header");
+const todoPopHeader = document.querySelector(".todo-popup .header");
+
+var isDragging = false;
+var offsetX, offsetY;
+
+refundPopHeader.addEventListener("mousedown", function (e) {
+  isDragging = true;
+  offsetX = e.clientX - refundPop.getBoundingClientRect().left;
+  offsetY = e.clientY - refundPop.getBoundingClientRect().top;
+});
+
+document.addEventListener("mousemove", function (e) {
+  if (isDragging) {
+    refundPop.style.transform = "translate(0%, 0%) scale(1)";
+    refundPop.style.left = e.clientX - offsetX + "px";
+    refundPop.style.top = e.clientY - offsetY + "px";
+    refundPop.style.transition = "none";
+  }
+});
+
+document.addEventListener("mouseup", function (e) {
+  isDragging = false;
+  refundPop.style.transition = "opacity 0.4s ease , transform 0.4s ease";
+});
+
+todoPopHeader.addEventListener("mousedown", function (e) {
+  isDragging = true;
+  offsetX = e.clientX - todoPop.getBoundingClientRect().left;
+  offsetY = e.clientY - todoPop.getBoundingClientRect().top;
+});
+
+document.addEventListener("mousemove", function (e) {
+  if (isDragging) {
+    todoPop.style.transform = "translate(0%, 0%) scale(1)";
+    todoPop.style.left = e.clientX - offsetX + "px";
+    todoPop.style.top = e.clientY - offsetY + "px";
+    todoPop.style.transition = "none";
+  }
+});
+
+document.addEventListener("mouseup", function (e) {
+  isDragging = false;
+  todoPop.style.transition = "opacity 0.4s ease , transform 0.4s ease";
 });
 
 const refundInput = document.querySelector(".refund-button-input");
@@ -60,20 +131,20 @@ refundInput.addEventListener("click", function () {
   refundSec.innerHTML += `<code>KRCN Risk reject</code> `;
   refundSec.innerHTML += ` 현재 환불진행중
 건수는 ${refundTotal}건입니다.
-<li><span class="dot">•</span> KRCN Risk reject ${refundRisk}건</li>
+<li><span class="dot">• </span>KRCN Risk reject ${refundRisk}건</li>
 <li>
-  <span class="dot">•</span> Risk reject - Order canceled by recipient ${refundCanceled}건
+  <span class="dot">• </span>Risk reject - Order canceled by recipient ${refundCanceled}건
 </li>`;
 
   if (refundGlobalRisk !== 0) {
     refundSec.innerHTML += `<li>
-        <span class="dot">•</span> Global Risk reject ${refundGlobalRisk}건
+        <span class="dot">• </span>Global Risk reject ${refundGlobalRisk}건
       </li>`;
   }
 
   if (refundGlobalCanceled !== 0) {
     refundSec.innerHTML += `<li>
-        <span class="dot">•</span> Global Risk reject - Order canceled by recipient ${refundGlobalCanceled}건
+        <span class="dot">• </span>Global Risk reject - Order canceled by recipient ${refundGlobalCanceled}건
       </li>`;
   }
   refundSec.innerHTML += `이상  환불 안 내 단체 메일 발송 완료`;

@@ -22,6 +22,10 @@
   font-family: "Poppins", sans-serif;
 }
 
+dialog {
+  border: none;
+}
+
 .bx {
   font-size: 1.7rem;
 }
@@ -812,23 +816,100 @@ body {
   z-index: 2999;
 }
 
-.refund-popup {
-  position: absolute;
+.todo-popup {
+  position: fixed;
   z-index: 3999;
   top: 50%;
   left: 50%;
   width: 500px;
-  padding: 40px;
-  transform: translate(-50%, -50%);
+  padding: 0px 30px 30px 30px;
+  transform: translate(-50%, -50%) scale(0.8);
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
   box-sizing: border-box;
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
+  opacity: 0;
+}
+
+.todo-popup .header {
+  padding: 30px 30px 0px 30px;
+  margin: 0px -30px 0px -30px;
+}
+
+/* 폰 화면에서 적용될 스타일 */
+@media (max-width: 767px) {
+  .todo-popup {
+    width: 440px;
+  }
+}
+
+.todo-popup .bx-plus {
+  transform: rotate(45deg);
+}
+
+.todo-close-button {
+  border: none;
+  background-color: transparent;
+}
+
+.todo-text {
+  display: flex;
+  justify-content: center;
+}
+
+.todo-input:focus {
+  outline: none;
+  background-color: #ffffffd3;
+}
+
+.todo-input {
+  width: 100%;
+  height: 45px;
+  border-radius: 50px;
+  border: 1px solid var(--dark);
+  display: flex;
+  text-align: center;
+
+  background-color: #dfdfdfc1;
+}
+
+.refund-popup {
+  position: fixed;
+  z-index: 3999;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  padding: 0px 30px 30px 30px;
+  transform: translate(-50%, -50%) scale(0.8);
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+}
+
+.refund-popup .header {
+  padding: 30px 30px 0px 30px;
+  margin: 0px -30px 0px -30px;
+}
+
+@media (max-width: 767px) {
+  .refund-popup {
+    width: 440px;
+  }
 }
 
 .refund-popup .bx-plus {
   transform: rotate(45deg);
+}
+
+.refund-close-button {
+  border: none;
+  background-color: transparent;
 }
 
 .refund-popup .completed {
@@ -850,18 +931,19 @@ body {
   background-color: #dfdfdfc1;
 }
 
-.refund-button {
+.refund-button,
+.todo-button {
   display: flex;
   justify-content: center;
-
   margin-top: 30px;
 }
 
 .refund-button-input,
-.refund-button-output {
+.refund-button-output,
+.todo-button-input {
   height: 45px;
   width: 400px;
-  border-radius: 5px;
+  border-radius: 6px;
   border: none;
   background-color: var(--primary);
   color: var(--light);
@@ -869,6 +951,12 @@ body {
   font-weight: 500;
   cursor: pointer;
 }
+
+.todo-button-input {
+  width: 100%;
+  height: 40px;
+}
+
 .refund-button-output {
   margin-left: 40px;
   background-color: var(--primary);
