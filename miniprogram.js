@@ -7,37 +7,47 @@ const todoPopClose = document.querySelector(".todo-popup .bx-plus");
 const todoPopOpen = document.querySelector(".todo-list .bx-plus");
 const dimlayer = document.querySelector(".dimlayer");
 
-refundPopOpen.addEventListener("click", function () {
+refundPopOpen.addEventListener("click", () => {
+  // refundPop.classList.remove("hidden");
+  // dimlayer.classList.remove("hidden");
   refundPop.showModal();
-  refundPop.style.transform = "translate(-50%, -50%) scale(1)";
+  refundPop.style.transform = "translate(-50%, -50%)";
+  refundPop.classList.remove("hidden");
   dimlayer.classList.remove("hidden");
 
-  refundPop.style.opacity = 1;
-  refundPop.style.transform += "scale(1)";
-  refundPop.style.left = "50%";
-  refundPop.style.top = "50%";
+  setTimeout(() => {
+    refundPop.style.transform += "scale(1)";
+    refundPop.style.opacity = 1;
+    refundPop.style.left = "50%";
+    refundPop.style.top = "50%";
+  }, 0);
 });
 
 refundPop.addEventListener("close", () => {
   refundPop.style.opacity = 0;
   refundPop.style.transform = "translate(-50%, -50%) scale(0.8)";
+  refundPop.classList.add("hidden");
   dimlayer.classList.add("hidden");
 });
 
 todoPopOpen.addEventListener("click", function () {
   todoPop.showModal();
   todoPop.style.transform = "translate(-50%, -50%) scale(1)";
+  todoPop.classList.remove("hidden");
   dimlayer.classList.remove("hidden");
 
-  todoPop.style.opacity = 1;
-  todoPop.style.transform += "scale(1)";
-  todoPop.style.left = "50%";
-  todoPop.style.top = "50%";
+  setTimeout(() => {
+    todoPop.style.opacity = 1;
+    todoPop.style.transform += "scale(1)";
+    todoPop.style.left = "50%";
+    todoPop.style.top = "50%";
+  }, 0);
 });
 
 todoPop.addEventListener("close", () => {
   todoPop.style.opacity = 0;
   todoPop.style.transform = "translate(-50%, -50%) scale(0.8)";
+  todoPop.classList.add("hidden");
   dimlayer.classList.add("hidden");
 });
 

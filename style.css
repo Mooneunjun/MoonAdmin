@@ -2,7 +2,7 @@
 
 :root {
   --light: #f6f6f9;
-  --primary: #752fdd;
+  --primary: #9867e1;
   --light-primary: #ddccf6;
   --grey: #eee;
   --dark-grey: #aaaaaa;
@@ -75,7 +75,7 @@ body {
 }
 
 .sidebar .logo {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 700;
   height: 56px;
   display: flex;
