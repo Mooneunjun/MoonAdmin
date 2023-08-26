@@ -31,9 +31,14 @@ if (!localStorage.getItem("User")) {
 if (localStorage.getItem("UserLogin")) {
   var UserLogin = JSON.parse(localStorage.getItem("UserLogin") || "[]");
   var logoName = document.querySelector(".logo-name span");
-  document.querySelector(".login-box").classList.add("hidden");
-  document.querySelector(".bg-shadow").classList.add("hidden");
+  setTimeout(() => {
+    document.querySelector(".login-box").classList.add("hidden");
+    document.querySelector(".bg-shadow").classList.add("hidden");
+  }, 1000);
   logoName.innerText = UserLogin.Name;
+} else {
+  document.querySelector(".login-box").classList.remove("hidden");
+  document.querySelector(".bg-shadow").classList.remove("hidden");
 }
 
 const logout = document.querySelector(".logout");
