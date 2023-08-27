@@ -19,6 +19,11 @@ if (!localStorage.getItem("User")) {
       Password: "admin2023",
       Name: "Admin",
     },
+    {
+      Id: "손분일",
+      Password: "sun2023",
+      Name: "손분일",
+    },
   ];
 
   // 배열을 JSON 문자열로 변환

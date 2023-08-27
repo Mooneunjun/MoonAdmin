@@ -189,6 +189,7 @@ body {
 
 .content nav {
   height: 56px;
+  transition: all 0.3s ease;
   background: var(--light);
   padding: 0 24px 0 0;
   display: flex;
@@ -202,6 +203,7 @@ body {
 
 .content nav::before {
   content: "";
+  transition: all 0.3s ease;
   position: absolute;
   width: 40px;
   height: 40px;
@@ -234,6 +236,7 @@ body {
 
 .content nav form .form-input input {
   flex-grow: 1;
+  transition: all 0.3s ease;
   padding: 0 16px;
   height: 100%;
   border: none;
@@ -416,7 +419,7 @@ body {
 }
 
 .content main .insights li .info h3 {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 600;
   color: var(--dark);
 }
@@ -836,7 +839,7 @@ body {
   width: 500px;
   padding: 0px 30px 30px 30px;
   transform: translate(-50%, -50%) scale(0.8);
-  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  transition: transform 0.4s ease, opacity 0.4s ease;
   box-sizing: border-box;
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
   border-radius: 10px;
@@ -895,7 +898,7 @@ body {
   width: 500px;
   padding: 0px 30px 30px 30px;
   transform: translate(-50%, -50%) scale(0.8);
-  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  transition: transform 0.4s ease, opacity 0.4s ease;
   box-sizing: border-box;
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
   border-radius: 10px;
