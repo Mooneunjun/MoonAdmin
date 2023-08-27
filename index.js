@@ -1,3 +1,5 @@
+// 웹 페이지의 JavaScript 코드
+
 const sideLinks = document.querySelectorAll(
   ".sidebar .side-menu li a:not(.logout)"
 );
