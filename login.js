@@ -23,47 +23,6 @@ async function fetchData(userId) {
   }
 }
 
-// window.addEventListener("load", fetchData);
-
-//컬 스토리지에서 "user" 키와 그에 연결된 값이 삭제됩니다.
-// localStorage.removeItem("User");
-// 'User' 키가 로컬 스토리지에 없는 경우에만 실행
-// if (!localStorage.getItem("User")) {
-//   // 사용자 정보 객체 생성
-//   var users = [
-//     {
-//       Id: "chao",
-//       Password: "chao2023",
-//       Name: "Chao",
-//       authority: "user",
-//     },
-//     {
-//       Id: "moon",
-//       Password: "moon4657",
-//       Name: "Moon",
-//       authority: "admin",
-//     },
-//     {
-//       Id: "admin",
-//       Password: "admin2023",
-//       Name: "Admin",
-//       authority: "admin",
-//     },
-//     {
-//       Id: "손분일",
-//       Password: "sun2023",
-//       Name: "손분일",
-//       authority: "user",
-//     },
-//   ];
-
-//   // 배열을 JSON 문자열로 변환
-//   var usersJson = JSON.stringify(users);
-
-//   // 로컬 스토리지에 'User' 키로 저장
-//   localStorage.setItem("User", usersJson);
-// }
-
 if (localStorage.getItem("UserLogin")) {
   var UserLogin = JSON.parse(localStorage.getItem("UserLogin") || "[]");
   var logoName = document.querySelector(".logo-name span");
