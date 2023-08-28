@@ -16,9 +16,11 @@ sideLinks.forEach((item) => {
 
 const menuBar = document.querySelector(".content nav .bx.bx-menu");
 const sideBar = document.querySelector(".sidebar");
+const navBar = document.querySelector(".content .navbar");
 
 menuBar.addEventListener("click", () => {
   sideBar.classList.toggle("close");
+  navBar.classList.toggle("close");
 });
 
 const searchBtn = document.querySelector(
@@ -44,6 +46,7 @@ searchBtn.addEventListener("click", function (e) {
 window.addEventListener("resize", () => {
   if (window.innerWidth < 768) {
     sideBar.classList.add("close");
+    navBar.classList.add("close");
   } else {
     // sideBar.classList.remove("close");
   }
@@ -56,26 +59,43 @@ window.addEventListener("resize", () => {
 document.addEventListener("DOMContentLoaded", function () {
   let darkMode = JSON.parse(localStorage.getItem("darkMode"));
   const toggler = document.getElementById("theme-toggle");
+  const darkModethemeColor = "#181a1e";
+  const lightModethemeColor = "#f6f6f9";
 
   if (darkMode === null) {
     localStorage.setItem("darkMode", false);
     darkMode = false;
+    document
+      .getElementById("themeColorMetaTag")
+      .setAttribute("content", lightModethemeColor);
   }
 
   if (darkMode) {
     document.body.classList.add("dark");
     toggler.checked = true;
+    document
+      .getElementById("themeColorMetaTag")
+      .setAttribute("content", darkModethemeColor);
   } else {
     document.body.classList.remove("dark");
     toggler.checked = false;
+    document
+      .getElementById("themeColorMetaTag")
+      .setAttribute("content", lightModethemeColor);
   }
 
   toggler.addEventListener("change", function () {
     if (this.checked) {
       document.body.classList.add("dark");
+      document
+        .getElementById("themeColorMetaTag")
+        .setAttribute("content", darkModethemeColor);
       localStorage.setItem("darkMode", true);
     } else {
       document.body.classList.remove("dark");
+      document
+        .getElementById("themeColorMetaTag")
+        .setAttribute("content", lightModethemeColor);
       localStorage.setItem("darkMode", false);
     }
   });
