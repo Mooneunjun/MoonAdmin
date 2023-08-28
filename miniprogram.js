@@ -54,37 +54,25 @@ todoPop.addEventListener("close", () => {
 const refundPopHeader = document.querySelector(".refund-popup .header");
 const todoPopHeader = document.querySelector(".todo-popup .header");
 
-var isDragging = false;
+var isDraggingRefund = false;
+var isDraggingTodo = false;
 var offsetX, offsetY;
 
 refundPopHeader.addEventListener("mousedown", function (e) {
-  isDragging = true;
+  isDraggingRefund = true;
   offsetX = e.clientX - refundPop.getBoundingClientRect().left;
   offsetY = e.clientY - refundPop.getBoundingClientRect().top;
 });
 
 document.addEventListener("mousemove", function (e) {
-  if (isDragging) {
+  if (isDraggingRefund) {
     refundPop.style.transform = "translate(0%, 0%) scale(1)";
     refundPop.style.left = e.clientX - offsetX + "px";
     refundPop.style.top = e.clientY - offsetY + "px";
     refundPop.style.transition = "none";
   }
-});
 
-document.addEventListener("mouseup", function (e) {
-  isDragging = false;
-  refundPop.style.transition = "opacity 0.4s ease , transform 0.4s ease";
-});
-
-todoPopHeader.addEventListener("mousedown", function (e) {
-  isDragging = true;
-  offsetX = e.clientX - todoPop.getBoundingClientRect().left;
-  offsetY = e.clientY - todoPop.getBoundingClientRect().top;
-});
-
-document.addEventListener("mousemove", function (e) {
-  if (isDragging) {
+  if (isDraggingTodo) {
     todoPop.style.transform = "translate(0%, 0%) scale(1)";
     todoPop.style.left = e.clientX - offsetX + "px";
     todoPop.style.top = e.clientY - offsetY + "px";
@@ -93,8 +81,16 @@ document.addEventListener("mousemove", function (e) {
 });
 
 document.addEventListener("mouseup", function (e) {
-  isDragging = false;
+  isDraggingRefund = false;
+  isDraggingTodo = false;
+  refundPop.style.transition = "opacity 0.4s ease , transform 0.4s ease";
   todoPop.style.transition = "opacity 0.4s ease , transform 0.4s ease";
+});
+
+todoPopHeader.addEventListener("mousedown", function (e) {
+  isDraggingTodo = true;
+  offsetX = e.clientX - todoPop.getBoundingClientRect().left;
+  offsetY = e.clientY - todoPop.getBoundingClientRect().top;
 });
 
 const refundInput = document.querySelector(".refund-button-input");

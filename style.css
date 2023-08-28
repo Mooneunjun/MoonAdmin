@@ -6,6 +6,7 @@
   --light-primary: #ddccf6;
   --grey: #eee;
   --dark-grey: #aaaaaa;
+  --light-grey: #d2d2d2;
   --dark: #363949;
   --danger: #d32f2f;
   --light-danger: #fecdd3;
@@ -48,6 +49,7 @@ body.dark {
   --light: #181a1e;
   --grey: #25252c;
   --dark: #fbfbfb;
+  --light-grey: #313131;
 }
 
 body {
@@ -386,6 +388,14 @@ body {
   align-items: center;
   grid-gap: 24px;
   cursor: pointer;
+  border: 1px solid #00000010;
+}
+
+.content main .insights li:hover {
+  /* background: var(--dark-grey); */
+  box-shadow: 0 0 15px var(--light-grey);
+
+  box-sizing: border-box;
 }
 
 .content main .insights li .bx {
@@ -446,6 +456,10 @@ body {
   background: var(--light);
   padding: 24px;
   overflow-x: auto;
+}
+
+.content main .bottom-data > div:hover {
+  box-shadow: 0 0 15px var(--light-grey);
 }
 
 .content main .bottom-data > dialog {
