@@ -22,6 +22,10 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+*:before,
+*:after {
+  box-sizing: border-box;
+}
 
 dialog {
   border: none;
@@ -75,7 +79,7 @@ body {
 }
 
 .sidebar.close {
-  width: 60px;
+  width: 0px;
 }
 
 .sidebar .logo {
@@ -185,8 +189,8 @@ body {
 }
 
 .sidebar.close ~ .content {
-  width: calc(100% - 60px);
-  left: 60px;
+  width: calc(100% - 0px);
+  left: 0px;
 }
 
 .content nav {
@@ -205,8 +209,8 @@ body {
 }
 
 .content .close {
-  width: calc(100% - 60px);
-  left: 60px;
+  width: calc(100% - 0px);
+  left: 0px;
 }
 
 .content nav::before {
@@ -228,6 +232,7 @@ body {
 .content nav .bx.bx-menu {
   cursor: pointer;
   color: var(--dark);
+  margin-left: 5px;
 }
 
 .content nav form {
@@ -389,7 +394,7 @@ body {
 }
 
 .content main .insights li {
-  padding: 24px;
+  padding: 20px;
   background: var(--light);
   border-radius: 20px;
   display: flex;
@@ -462,7 +467,7 @@ body {
 .content main .bottom-data > div {
   border-radius: 20px;
   background: var(--light);
-  padding: 24px;
+  padding: 20px;
   overflow-x: auto;
 }
 
@@ -479,7 +484,7 @@ body {
 .content main .bottom-data .header {
   display: flex;
   align-items: center;
-  grid-gap: 16px;
+  grid-gap: 5px;
   margin-bottom: 24px;
 }
 
@@ -570,7 +575,7 @@ body {
   width: 100%;
   margin-bottom: 16px;
   background: var(--grey);
-  padding: 14px 10px;
+  padding: 12px 8px;
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -878,8 +883,8 @@ body {
 }
 
 .todo-popup .header {
-  padding: 25px 25px 0px 25px;
-  margin: 0px -25px 0px -25px;
+  padding: 25px 0px 0px 0px;
+  /* margin: 0px -25px 0px -25px; */
 }
 
 /* 폰 화면에서 적용될 스타일 */
@@ -937,8 +942,8 @@ body {
 }
 
 .refund-popup .header {
-  padding: 25px 25px 0px 25px;
-  margin: 0px -25px 0px -25px;
+  padding: 25px 0px 0px 0px;
+  /* margin: 0px -25px 0px -25px; */
 }
 
 @media (max-width: 767px) {
@@ -986,7 +991,7 @@ body {
 .refund-button-output,
 .todo-button-input {
   height: 45px;
-  width: 400px;
+  width: 100%;
   border-radius: 6px;
   border: none;
   background-color: var(--primary);
@@ -1011,6 +1016,7 @@ body {
   background-color: var(--grey);
   padding: 20px;
   border-radius: 15px;
+  font-size: 14px;
 }
 
 .refund-sec .dot {
