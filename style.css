@@ -21,6 +21,8 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+
+  -webkit-tap-highlight-color: transparent;
 }
 *:before,
 *:after {
@@ -82,7 +84,7 @@ body {
   width: 60px;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 530px) {
   .sidebar.close {
     width: 0px;
   }
@@ -167,12 +169,19 @@ body {
   transition: all 0.3s ease;
 }
 
+@media screen and (max-width: 530px) {
+  .sidebar .side-menu li a {
+    width: calc(49px - (4px * 2));
+    transition: all 0.3s ease;
+  }
+}
+
 .sidebar .side-menu li.active a {
   color: var(--primary);
 }
 
 .sidebar.close .side-menu li a {
-  width: calc(48px - (4px * 2));
+  width: calc(49px - (4px * 2));
   transition: all 0.3s ease;
 }
 
@@ -199,7 +208,7 @@ body {
   left: 60px;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 530px) {
   .sidebar.close ~ .content {
     width: calc(100% - 0px);
     left: 0px;
@@ -210,7 +219,7 @@ body {
   height: 56px;
   transition: all 0.3s ease;
   background: var(--light);
-  padding: 0 24px 0 0;
+  padding: 0 14px 0 14px;
   display: flex;
   align-items: center;
   grid-gap: 24px;
@@ -226,7 +235,7 @@ body {
   left: 60px;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 530px) {
   .content .close {
     width: calc(100% - 0px);
     left: 0px;
@@ -245,7 +254,7 @@ body {
   box-shadow: -20px -20px 0 var(--light);
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 530px) {
   .content .close::before {
     display: none;
   }
@@ -258,7 +267,6 @@ body {
 .content nav .bx.bx-menu {
   cursor: pointer;
   color: var(--dark);
-  margin-left: 5px;
 }
 
 .content nav form {
@@ -383,6 +391,7 @@ body {
   display: flex;
   align-items: center;
   grid-gap: 16px;
+  font-size: 14px;
 }
 
 .content main .header .left .breadcrumb li {
@@ -410,6 +419,7 @@ body {
   justify-content: center;
   grid-gap: 5px;
   font-weight: 500;
+  font-size: 14px;
 }
 
 .content main .insights {
@@ -417,6 +427,13 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   grid-gap: 24px;
   margin-top: 36px;
+}
+
+@media screen and (max-width: 530px) {
+  .content main .insights {
+    grid-gap: 12px;
+    margin-top: 24px;
+  }
 }
 
 .content main .insights li {
@@ -639,14 +656,34 @@ body {
     width: 200px;
   }
 
+  @media screen and (max-width: 530px) {
+    .sidebar {
+      width: 60px;
+    }
+  }
+
   .content {
-    width: calc(100% - 60px);
+    width: calc(100% - 200px);
     left: 200px;
+  }
+
+  @media screen and (max-width: 530px) {
+    .content {
+      width: calc(100% - 60px);
+      left: 60px;
+    }
   }
 
   .content nav {
     width: calc(100% - 200px);
     left: 200px;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .content nav {
+    width: calc(100% - 60px);
+    left: 60px;
   }
 }
 
