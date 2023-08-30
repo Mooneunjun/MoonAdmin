@@ -79,7 +79,13 @@ body {
 }
 
 .sidebar.close {
-  width: 0px;
+  width: 60px;
+}
+
+@media screen and (max-width: 500px) {
+  .sidebar.close {
+    width: 0px;
+  }
 }
 
 .sidebar .logo {
@@ -189,8 +195,15 @@ body {
 }
 
 .sidebar.close ~ .content {
-  width: calc(100% - 0px);
-  left: 0px;
+  width: calc(100% - 60px);
+  left: 60px;
+}
+
+@media screen and (max-width: 500px) {
+  .sidebar.close ~ .content {
+    width: calc(100% - 0px);
+    left: 0px;
+  }
 }
 
 .content nav {
@@ -209,8 +222,15 @@ body {
 }
 
 .content .close {
-  width: calc(100% - 0px);
-  left: 0px;
+  width: calc(100% - 60px);
+  left: 60px;
+}
+
+@media screen and (max-width: 500px) {
+  .content .close {
+    width: calc(100% - 0px);
+    left: 0px;
+  }
 }
 
 .content nav::before {
@@ -223,6 +243,12 @@ body {
   left: 0;
   border-radius: 50%;
   box-shadow: -20px -20px 0 var(--light);
+}
+
+@media screen and (max-width: 500px) {
+  .content .close::before {
+    display: none;
+  }
 }
 
 .content nav a {
