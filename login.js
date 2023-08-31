@@ -1,14 +1,17 @@
 async function fetchData(userId) {
   try {
-    const response = await fetch("https://moonadmin.mooneunjun.workers.dev/", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        id: userId,
-      }),
-    });
+    const response = await fetch(
+      "https://moonadminusers.mooneunjun.workers.dev/",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          id: userId,
+        }),
+      }
+    );
 
     if (response.status === 404) {
       console.log("User not found");
