@@ -1117,3 +1117,21 @@ button:disabled {
   color: #aaaaaa;
   cursor: not-allowed;
 }
+
+/* 임시 */
+
+.nav-setting {
+  position: relative;
+}
+
+.development {
+  position: fixed;
+
+  top: 40%;
+  left: 30%;
+
+  translate: (-50%, -50%);
+
+  font-weight: 900;
+  font-size: 30px;
+}

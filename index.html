@@ -84,56 +84,57 @@
       <!-- End of Navbar -->
 
       <main>
-        <div class="header">
-          <div class="left">
-            <h1>Dashboard</h1>
-            <ul class="breadcrumb">
-              <li><a href="#"> Dashboard </a></li>
-              /
-              <li><a href="#" class="active">Mini Program</a></li>
-            </ul>
+        <div class="nav-dashboard">
+          <div class="header">
+            <div class="left">
+              <h1>Dashboard</h1>
+              <ul class="breadcrumb">
+                <li><a href="#"> Dashboard </a></li>
+                /
+                <li><a href="#" class="active">Mini Program</a></li>
+              </ul>
+            </div>
+            <a href="#" class="report">
+              <i class="bx bx-cloud-download"></i>
+              <span>Download CSV</span>
+            </a>
           </div>
-          <a href="#" class="report">
-            <i class="bx bx-cloud-download"></i>
-            <span>Download CSV</span>
-          </a>
-        </div>
 
-        <!-- Insights -->
-        <ul class="insights">
-          <li>
-            <i class="bx bx-calendar-check"></i>
-            <span class="info">
-              <h3>1,074</h3>
-              <p>Paid Order</p>
-            </span>
-          </li>
-          <li>
-            <i class="bx bx-show-alt"></i>
-            <span class="info">
-              <h3>3,944</h3>
-              <p>Site Visit</p>
-            </span>
-          </li>
-          <li>
-            <i class="bx bx-line-chart"></i>
-            <span class="info">
-              <h3>14,721</h3>
-              <p>Searches</p>
-            </span>
-          </li>
-          <li class="refund">
-            <i class="bx bx-dollar-circle"></i>
-            <span class="info">
-              <h3>환불진행중</h3>
-              <p>refund</p>
-            </span>
-          </li>
-        </ul>
-        <!-- End of Insights -->
+          <!-- Insights -->
+          <ul class="insights">
+            <li>
+              <i class="bx bx-calendar-check"></i>
+              <span class="info">
+                <h3>1,074</h3>
+                <p>Paid Order</p>
+              </span>
+            </li>
+            <li>
+              <i class="bx bx-show-alt"></i>
+              <span class="info">
+                <h3>3,944</h3>
+                <p>Site Visit</p>
+              </span>
+            </li>
+            <li>
+              <i class="bx bx-line-chart"></i>
+              <span class="info">
+                <h3>14,721</h3>
+                <p>Searches</p>
+              </span>
+            </li>
+            <li class="refund">
+              <i class="bx bx-dollar-circle"></i>
+              <span class="info">
+                <h3>환불진행중</h3>
+                <p>refund</p>
+              </span>
+            </li>
+          </ul>
+          <!-- End of Insights -->
 
-        <div class="bottom-data">
-          <!-- <div class="orders">
+          <div class="bottom-data">
+            <!-- <div class="orders">
             <div class="header">
               <i class="bx bx-receipt"></i>
               <h3>Recent Orders</h3>
@@ -177,118 +178,120 @@
             </table>
           </div> -->
 
-          <!-- Reminders -->
-          <div class="reminders todo-list">
-            <div class="header">
-              <i class="bx bx-note"></i>
-              <h3>Remiders</h3>
-              <i class="bx bx-filter"></i>
-              <i class="bx bx-plus"></i>
+            <!-- Reminders -->
+            <div class="reminders todo-list">
+              <div class="header">
+                <i class="bx bx-note"></i>
+                <h3>Remiders</h3>
+                <i class="bx bx-filter"></i>
+                <i class="bx bx-plus"></i>
+              </div>
+              <ul class="task-list">
+                <li class="completed">
+                  <div class="task-title">
+                    <i class="bx bx-check-circle"></i>
+                    <p>Start Our Meeting</p>
+                  </div>
+                  <i class="bx bx-dots-vertical-rounded"></i>
+                </li>
+                <li class="completed">
+                  <div class="task-title">
+                    <i class="bx bx-check-circle"></i>
+                    <p>Analyse Our Site</p>
+                  </div>
+                  <i class="bx bx-dots-vertical-rounded"></i>
+                </li>
+                <li class="not-completed">
+                  <div class="task-title">
+                    <i class="bx bx-x-circle"></i>
+                    <p>Play Footbal</p>
+                  </div>
+                  <i class="bx bx-dots-vertical-rounded"></i>
+                </li>
+              </ul>
             </div>
-            <ul class="task-list">
-              <li class="completed">
-                <div class="task-title">
-                  <i class="bx bx-check-circle"></i>
-                  <p>Start Our Meeting</p>
-                </div>
-                <i class="bx bx-dots-vertical-rounded"></i>
-              </li>
-              <li class="completed">
-                <div class="task-title">
-                  <i class="bx bx-check-circle"></i>
-                  <p>Analyse Our Site</p>
-                </div>
-                <i class="bx bx-dots-vertical-rounded"></i>
-              </li>
-              <li class="not-completed">
-                <div class="task-title">
-                  <i class="bx bx-x-circle"></i>
-                  <p>Play Footbal</p>
-                </div>
-                <i class="bx bx-dots-vertical-rounded"></i>
-              </li>
-            </ul>
-          </div>
-          <!-- End of Reminders-->
+            <!-- End of Reminders-->
 
-          <!-- todo-popup -->
-          <dialog class="reminders todo-popup hidden">
-            <div class="header">
-              <i class="bx bx-note"></i>
-              <h3>Todo-plus</h3>
-              <form method="dialog">
-                <button class="todo-close-button" value="close">
-                  <i class="bx bx-plus"></i>
-                </button>
-              </form>
-            </div>
-            <div class="todo-text">
-              <input class="todo-input" />
-            </div>
-            <div class="todo-button">
-              <button class="todo-button-input">추가</button>
-            </div>
-          </dialog>
-          <!-- End of todo-->
+            <!-- todo-popup -->
+            <dialog class="reminders todo-popup hidden">
+              <div class="header">
+                <i class="bx bx-note"></i>
+                <h3>Todo-plus</h3>
+                <form method="dialog">
+                  <button class="todo-close-button" value="close">
+                    <i class="bx bx-plus"></i>
+                  </button>
+                </form>
+              </div>
+              <div class="todo-text">
+                <input class="todo-input" />
+              </div>
+              <div class="todo-button">
+                <button class="todo-button-input">추가</button>
+              </div>
+            </dialog>
+            <!-- End of todo-->
 
-          <!-- refund-popup -->
-          <dialog class="reminders refund-popup hidden">
-            <div class="header">
-              <i class="bx bx-note"></i>
-              <h3>환불진행중</h3>
-              <form method="dialog">
-                <button class="refund-close-button" value="close">
-                  <i class="bx bx-plus"></i>
-                </button>
-              </form>
-            </div>
-            <ul class="task-list">
-              <li class="not-completed refund-risk">
-                <div class="task-title">
-                  <i class="bx bx-x-circle"></i>
-                  <p>KRCN Risk reject</p>
-                </div>
-                <input class="numberInput" type="number" min="0" value="0" />
-              </li>
-              <li class="not-completed refund-canceled">
-                <div class="task-title">
-                  <i class="bx bx-x-circle"></i>
-                  <p>Order Canceled</p>
-                </div>
-                <input class="numberInput" type="number" min="0" value="0" />
-              </li>
+            <!-- refund-popup -->
+            <dialog class="reminders refund-popup hidden">
+              <div class="header">
+                <i class="bx bx-note"></i>
+                <h3>환불진행중</h3>
+                <form method="dialog">
+                  <button class="refund-close-button" value="close">
+                    <i class="bx bx-plus"></i>
+                  </button>
+                </form>
+              </div>
+              <ul class="task-list">
+                <li class="not-completed refund-risk">
+                  <div class="task-title">
+                    <i class="bx bx-x-circle"></i>
+                    <p>KRCN Risk reject</p>
+                  </div>
+                  <input class="numberInput" type="number" min="0" value="0" />
+                </li>
+                <li class="not-completed refund-canceled">
+                  <div class="task-title">
+                    <i class="bx bx-x-circle"></i>
+                    <p>Order Canceled</p>
+                  </div>
+                  <input class="numberInput" type="number" min="0" value="0" />
+                </li>
 
-              <li class="not-completed refund-global-risk">
-                <div class="task-title">
-                  <i class="bx bx-x-circle"></i>
-                  <p><strong>Global</strong> Risk reject</p>
-                </div>
+                <li class="not-completed refund-global-risk">
+                  <div class="task-title">
+                    <i class="bx bx-x-circle"></i>
+                    <p><strong>Global</strong> Risk reject</p>
+                  </div>
 
-                <input class="numberInput" type="number" min="0" value="0" />
-              </li>
+                  <input class="numberInput" type="number" min="0" value="0" />
+                </li>
 
-              <li class="not-completed refund-global-canceled">
-                <div class="task-title">
-                  <i class="bx bx-x-circle"></i>
-                  <p><strong>Global</strong> Order Canceled</p>
-                </div>
+                <li class="not-completed refund-global-canceled">
+                  <div class="task-title">
+                    <i class="bx bx-x-circle"></i>
+                    <p><strong>Global</strong> Order Canceled</p>
+                  </div>
 
-                <input class="numberInput" type="number" min="0" value="0" />
-              </li>
-              <!-- <li class="not-completed">
+                  <input class="numberInput" type="number" min="0" value="0" />
+                </li>
+                <!-- <li class="not-completed">
                 <div class="task-title">
                   <i class="bx bx-x-circle"></i>
                   <p>Play Footbal</p>
                 </div>
                 <i class="bx bx-dots-vertical-rounded"></i>
               </li> -->
-            </ul>
-            <div class="refund-button">
-              <button class="refund-button-input">입력</button>
-              <button class="refund-button-output hidden" disabled>복사</button>
-            </div>
-            <div class="refund-sec hidden">
-              <!-- @here 🇨🇳  8/4  <code>KRCN Risk reject</code> 현재 환불진행중
+              </ul>
+              <div class="refund-button">
+                <button class="refund-button-input">입력</button>
+                <button class="refund-button-output hidden" disabled>
+                  복사
+                </button>
+              </div>
+              <div class="refund-sec hidden">
+                <!-- @here 🇨🇳  8/4  <code>KRCN Risk reject</code> 현재 환불진행중
               건수는 5건입니다.
               <li><span class="dot">•</span> KRCN Risk reject 5건</li>
               <li>
@@ -296,9 +299,24 @@
                 recipient 0건
               </li>
               이상  환불 안 내 단체 메일 발송 완료 -->
+              </div>
+            </dialog>
+            <!-- End of refund-popup-->
+          </div>
+        </div>
+
+        <div class="nav-settings hidden">
+          <div class="header">
+            <div class="left">
+              <h1>Settings</h1>
+              <ul class="breadcrumb">
+                <li><a href="#"> Settings </a></li>
+                /
+                <li><a href="#" class="active">General</a></li>
+              </ul>
             </div>
-          </dialog>
-          <!-- End of refund-popup-->
+          </div>
+          <div class="development">💡Under development</div>
         </div>
         <div class="dimlayer hidden"></div>
       </main>
@@ -348,5 +366,6 @@
     <script src="index.js"></script>
     <script src="login.js"></script>
     <script src="miniprogram.js"></script>
+    <script src="settings.js"></script>
   </body>
 </html>
