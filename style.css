@@ -1120,7 +1120,8 @@ button:disabled {
 
 /* 임시 */
 
-.nav-settings {
+.nav-settings,
+.nav-users {
   position: relative;
   height: 400px;
   width: 100%;
@@ -1131,7 +1132,7 @@ button:disabled {
 
   top: 50%;
   left: 50%;
-  transform: translate(-15%, -25%);
+  transform: translate(-20%, -25%);
 
   font-weight: 900;
   font-size: 30px;
@@ -1139,6 +1140,7 @@ button:disabled {
 
 @media screen and (max-width: 530px) {
   .development {
-    left: 17%;
+    left: 25%;
+    top: 40%;
   }
 }
