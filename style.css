@@ -1120,18 +1120,25 @@ button:disabled {
 
 /* 임시 */
 
-.nav-setting {
+.nav-settings {
   position: relative;
+  height: 400px;
+  width: 100%;
 }
 
 .development {
-  position: fixed;
+  position: relative;
 
-  top: 40%;
-  left: 30%;
-
-  translate: (-50%, -50%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-15%, -25%);
 
   font-weight: 900;
   font-size: 30px;
+}
+
+@media screen and (max-width: 530px) {
+  .development {
+    left: 17%;
+  }
 }
