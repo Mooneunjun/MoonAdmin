@@ -1,24 +1,24 @@
 const NavDashboard = document.querySelector(".nav-dashboard");
 const NavSettings = document.querySelector(".nav-settings");
 const NavUsers = document.querySelector(".nav-users");
-const BxGroup = document.querySelector(".bx-group");
-const BxsDashboard = document.querySelector(".bxs-dashboard");
-const BxCog = document.querySelector(".bx-cog");
+const NavUsersBtn = document.querySelector(".nav-users-btn");
+const NavDashboardBtn = document.querySelector(".nav-dashboard-btn");
+const NavSettingsBtn = document.querySelector(".nav-settings-btn");
 
-BxCog.addEventListener("click", () => {
+NavSettingsBtn.addEventListener("click", () => {
   NavDashboard.classList.add("hidden");
   NavUsers.classList.add("hidden");
   NavSettings.classList.remove("hidden");
 });
 
-BxsDashboard.addEventListener("click", () => {
+NavDashboardBtn.addEventListener("click", () => {
   NavUsers.classList.add("hidden");
 
   NavSettings.classList.add("hidden");
   NavDashboard.classList.remove("hidden");
 });
 
-BxGroup.addEventListener("click", () => {
+NavUsersBtn.addEventListener("click", () => {
   NavDashboard.classList.add("hidden");
   NavSettings.classList.add("hidden");
   NavUsers.classList.remove("hidden");

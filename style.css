@@ -49,6 +49,7 @@ li {
 
 html {
   overflow-x: hidden;
+  overflow: overlay;
 }
 
 body.dark {
@@ -61,6 +62,32 @@ body.dark {
 body {
   background: var(--grey);
   overflow-x: hidden;
+}
+
+/* 스크롤바의 전체 폭 */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* 스크롤바의 트랙 */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* 스크롤바의 핸들 */
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  border: 2px solid transparent;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* 스크롤바의 핸들이 마우스에 의해 클릭될 때 */
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(0, 0, 0, 0);
 }
 
 .sidebar {
@@ -365,11 +392,17 @@ body {
 }
 
 .content main {
-  margin-top: 56px;
+  margin-top: 40px;
   width: 100%;
-  padding: 36px 14px;
+  padding: 36px 24px;
 
   /* max-height: calc(100vh - 56px); */
+}
+
+@media screen and (max-width: 576px) {
+  .content main {
+    padding: 36px 14px;
+  }
 }
 
 .content main .header {
@@ -431,7 +464,7 @@ body {
 
 @media screen and (max-width: 530px) {
   .content main .insights {
-    grid-gap: 12px;
+    grid-gap: 14px;
     margin-top: 24px;
   }
 }
@@ -1128,19 +1161,16 @@ button:disabled {
 }
 
 .development {
-  position: relative;
-
-  top: 50%;
-  left: 50%;
-  transform: translate(-20%, -25%);
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-weight: 900;
+  height: 400px;
   font-size: 30px;
 }
 
-@media screen and (max-width: 530px) {
-  .development {
-    left: 25%;
-    top: 40%;
-  }
+.development-sec {
+  display: flex;
+  text-align: center;
+  color: var(--dark);
 }
