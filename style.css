@@ -1143,6 +1143,22 @@ body {
 
 input[type="number"] {
   padding-left: 0px;
+  border: 1px solid #dddddd;
+}
+/* 크롬, 사파리, 엣지 브라우저 */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* 파이어폭스 브라우저 */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input[type="number"]:hover {
+  background-color: #dddddd50;
 }
 
 button:disabled {
@@ -1153,20 +1169,15 @@ button:disabled {
 
 /* 임시 */
 
-.nav-settings,
-.nav-users {
-  position: relative;
-  height: 400px;
-  width: 100%;
-}
-
 .development {
   display: flex;
+  position: relative;
+  height: 500px;
   justify-content: center;
   align-items: center;
   font-weight: 900;
-  height: 400px;
   font-size: 30px;
+  position: relative;
 }
 
 .development-sec {
