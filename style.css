@@ -445,7 +445,8 @@ body {
   height: 36px;
   padding: 0 16px;
   border-radius: 36px;
-  background: var(--primary);
+  background: linear-gradient(90deg, #9867e1c9, var(--primary));
+
   color: var(--light);
   display: flex;
   align-items: center;
