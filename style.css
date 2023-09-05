@@ -754,6 +754,7 @@ body {
 
   .content main .insights {
     grid-template-columns: 1fr;
+    grid-gap: 14px;
   }
 
   .content main .bottom-data .header {
